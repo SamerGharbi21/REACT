@@ -1,14 +1,14 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 import TeamMember from './TeamMember'
 import memberInfo from './memberInfo'
 
 
-class Team extends Component{
+class Team extends Component {
 
-    constructor(){
+    constructor() {
         super()
         this.state = {
-            memberInfo : memberInfo,
+            memberInfo: memberInfo,
             members: [],
             counter: 0,
         }
@@ -16,16 +16,16 @@ class Team extends Component{
     }
 
 
-    clickEvent(){
-        if(this.state.counter < this.state.memberInfo.length){
+    clickEvent() {
+        if (this.state.counter < this.state.memberInfo.length) {
             this.state.members.push(this.state.memberInfo[this.state.counter]);
-            this.setState(function(prevState){
-                return {counter: prevState.counter + 1}
+            this.setState(function (prevState) {
+                return { counter: prevState.counter + 1 }
             });
             this.newMembers = this.state.members.map(member => {
-                return <TeamMember  key={member.id} img={member.img} name={member.name}
-                                    position={member.position} phone={member.phone}
-                                    email={member.email} website={member.website} />
+                return <TeamMember key={member.id} img={member.img} name={member.name}
+                    position={member.position} phone={member.phone}
+                    email={member.email} website={member.website} />
             })
         }
     }
@@ -33,15 +33,15 @@ class Team extends Component{
 
 
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="row">
                 <div className="col-md-12">
                     <button className="btn btn-primary btn-lg btn-block"
-                            onClick={this.clickEvent}>click me!</button>
+                        onClick={this.clickEvent}>click me!</button>
                 </div>
-                    {this.newMembers}
-               
+                {this.newMembers}
+
             </div>
         )
     }

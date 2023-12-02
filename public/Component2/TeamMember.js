@@ -1,12 +1,12 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
-class TeamMember extends Component{
-    render(){
-        return(
+class TeamMember extends Component {
+    render() {
+        return (
             <div className="col-md-4 col-sm-6">
-                <div className="card" style={{borderColor: this.props.website ? '' : 'red'}}>
+                <div className="card" style={{ borderColor: this.props.website ? '' : 'red' }}>
                     <div className="card-header">
-                        <img style={{maxWidth: '100%'}} src={this.props.img} alt={this.props.name} />
+                        <img style={{ maxWidth: '100%' }} src={this.props.img} alt={this.props.name} />
                     </div>
                     <div className="card-body">
                         <h2>{this.props.name}</h2>
@@ -17,7 +17,7 @@ class TeamMember extends Component{
                     </div>
                 </div>
             </div>
-           )
+        )
     }
 }
 
