@@ -5,7 +5,6 @@ import memberInfo from './memberInfo'
 
 class Team extends Component{
 
-// البنّاء    
     constructor(){
         super()
         this.state = {
@@ -17,7 +16,6 @@ class Team extends Component{
     }
 
 
-// التعامل مع الأحداث
     clickEvent(){
         if(this.state.counter < this.state.memberInfo.length){
             this.state.members.push(this.state.memberInfo[this.state.counter]);
@@ -34,7 +32,7 @@ class Team extends Component{
 
 
 
-// الطباعة
+
     render(){
         return(
             <div className="row">
